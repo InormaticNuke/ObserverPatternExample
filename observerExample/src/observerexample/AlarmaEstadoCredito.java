@@ -1,22 +1,28 @@
 package observerexample;
+import java.util.ArrayList;
 
 public class AlarmaEstadoCredito implements Subject{
     
-    private static ArrayList<
+    private static ArrayList<IEstadoCredito> observadores = new ArrayList<IEstadoCredito>;
 
     @Override
     public void attach(IEstadoCredito observador) {
+        
+        observadores.add(observador);
         
     }
 
     @Override
     public void dettach(IEstadoCredito observador) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        observadores.remove(observador);
     }
 
     @Override
     public void notificacionObservadores() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        for (int i=0; i <observadores.size(); i++){
+            observadores
+        }
     }
     
     
