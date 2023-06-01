@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class AlarmaEstadoCredito implements Subject{
     
-    private static ArrayList<IEstadoCredito> observadores = new ArrayList<IEstadoCredito>;
+    private static ArrayList<IEstadoCredito> observadores = new ArrayList<IEstadoCredito>();
 
     @Override
     public void attach(IEstadoCredito observador) {
@@ -21,7 +21,7 @@ public class AlarmaEstadoCredito implements Subject{
     @Override
     public void notificacionObservadores() {
         for (int i=0; i <observadores.size(); i++){
-            observadores
+            observadores.get(i).update();
         }
     }
     
