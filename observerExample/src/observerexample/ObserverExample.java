@@ -10,6 +10,14 @@ public class ObserverExample {
         
         alarma.attach(new ObservadorEjecutivo());
         
+        alarma.attach(new ObservadorExtra1());
+        
+        alarma.attach(new ObservadorExtra2());
+        
+        alarma.attach(new ObservadorExtra3());
+        
+        alarma.attach(new ObservadorExtra4());
+        
         Supervisor sup = new Supervisor();
         
         Credito c = new Credito();
